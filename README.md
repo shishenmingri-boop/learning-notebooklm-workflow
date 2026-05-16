@@ -29,8 +29,6 @@ Node.jsが未導入、または古い場合はNode.js 20以上を導入してく
 npm init -y
 ```
 
-この手順により、Playwright依存関係がこの作業フォルダに閉じます。
-
 ## 3. Playwrightを導入する
 
 ```bash
@@ -46,8 +44,6 @@ npx playwright install chrome
 ```
 
 ## 5. LinuxのOS依存パッケージを導入する
-
-Linux環境では、Chrome起動に必要な共有ライブラリが不足する場合があります。たとえば `libnspr4.so` が見つからない場合は、この手順が必要です。
 
 ```bash
 npx playwright install-deps chrome
@@ -75,18 +71,6 @@ npx playwright open --channel chrome https://notebooklm.google.com/
 
 NotebookLMが開けば、ブラウザ実行環境は準備済みです。
 
-## 7. NotebookLM自動化を実行する
-
-学習パッケージ生成後、スキルのアップロードスクリプトを実行します。`--output-dir` は生成済みMarkdownファイルがあるディレクトリに合わせて変更してください。
-
-```bash
-node /home/user/.codex/skills/learning-notebooklm-workflow/scripts/notebooklm_web_upload.mjs \
-  --output-dir /home/user/projects/create-notebooklm/learning-output/2026-05-14-oauth-2 \
-  --notebook-title "NotebookLM学習ノート" \
-  --browser-channel chrome \
-  --user-data-dir /home/user/projects/create-notebooklm/.notebooklm-playwright-profile
-```
-
 Googleログインが必要な場合は、開いたChrome上でログインを完了してください。
 
 ### Playwrightプロファイルのセキュリティ上の扱い
@@ -108,7 +92,7 @@ NotebookLM画面での標準操作フローは次の通りです。
 4. 生成済みMarkdownファイルを選択する。
 5. `sources.md` にあるURLをURL/ウェブサイトソースとして追加する。
 
-## 8. Googleログインが拒否される場合
+## 7. Googleログインが拒否される場合
 
 通常Chromeでも、Playwrightから起動したブラウザでGoogleログインが拒否されることがあります。
 
