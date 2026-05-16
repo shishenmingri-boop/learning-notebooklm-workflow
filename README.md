@@ -111,8 +111,6 @@ This browser or app may not be secure.
 
 ログイン後、NotebookLMのトップ画面まで入れたことを確認し、Chromeを閉じてからアップロードスクリプトを再実行してください。
 
-詳細は [troubleshooting/2026-05-14-google-login-playwright.md](troubleshooting/2026-05-14-google-login-playwright.md) を参照してください。
-
 ## よくあるエラー
 
 ### `Playwrightがインストールされていません`
