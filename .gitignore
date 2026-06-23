@@ -4,3 +4,4 @@
 .env
 content-queue/config.json
 content-queue/boards.json
+node_modules/
