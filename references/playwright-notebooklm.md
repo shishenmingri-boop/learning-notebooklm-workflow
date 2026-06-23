@@ -29,6 +29,8 @@ This browser or app may not be secure.
 
 このため、スクリプトはPlaywright同梱Chromiumを標準経路として使いません。既定では通常のGoogle Chrome、次にMicrosoft Edgeの起動を試します。どちらも利用できない場合は自動化を止め、`notebooklm-upload-result.md` に原因と手動フォールバック手順を書きます。
 
+日次ニュース運用では、ログイン再利用の安定性を優先して同じ `--user-data-dir` を継続利用してください。特に理由がなければ既定の `.notebooklm-playwright-profile` を使い、毎回新規プロファイルを作らない方針を推奨します。
+
 通常ブラウザを指定する例:
 
 ```bash

@@ -1,0 +1,22 @@
+{
+  "name": "learning-notebooklm-workflow",
+  "version": "1.0.0",
+  "description": "learning-notebooklm-workflowは、NotebookLM用Markdown教材を生成し、PlaywrightでNotebookLMのWeb UIを操作してノート作成・ソースアップロードを行います。",
+  "main": "index.js",
+  "scripts": {
+    "pinterest:generate": "node scripts/pinterest_content_pipeline.mjs",
+    "pinterest:images": "node scripts/pinterest_generate_images.mjs",
+    "pinterest:images:dry-run": "node scripts/pinterest_generate_images.mjs --dry-run true --limit 3",
+    "pinterest:auth": "node scripts/pinterest_api_post.mjs --action auth",
+    "pinterest:boards": "node scripts/pinterest_api_post.mjs --action boards",
+    "pinterest:post:dry-run": "node scripts/pinterest_api_post.mjs --action post-queue --dry-run true",
+    "pinterest:post": "node scripts/pinterest_api_post.mjs --action post-queue --dry-run false",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "playwright": "^1.61.0"
+  }
+}

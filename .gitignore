@@ -1,0 +1,6 @@
+.notebooklm-playwright-profile/
+.notebooklm-news-playwright-profile/
+.pinterest-oauth-token.json
+.env
+content-queue/config.json
+content-queue/boards.json

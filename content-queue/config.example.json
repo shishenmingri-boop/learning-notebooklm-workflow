@@ -1,0 +1,29 @@
+{
+  "niche": "storage",
+  "noteBaseUrl": "https://note.com/your-account/n/",
+  "imagePublicBaseUrl": "https://your-cdn.example.com/pinterest-storage/",
+  "defaultLink": "https://note.com/your-account",
+  "pinsPerKeyword": 3,
+  "boardNames": {
+    "kitchen": "キッチン収納",
+    "oneroom": "ワンルーム収納",
+    "closet": "クローゼット整理",
+    "entry": "玄関収納",
+    "bath": "洗面収納",
+    "rental": "賃貸OK収納",
+    "living": "リビング収納"
+  },
+  "boardIds": {},
+  "publish": {
+    "defaultOffsetDays": 1,
+    "intervalHours": 8
+  },
+  "flux": {
+    "provider": "replicate",
+    "model": "black-forest-labs/flux-1.1-pro",
+    "aspectRatio": "2:3",
+    "outputFormat": "png",
+    "outputQuality": 90,
+    "promptSuffix": "realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic"
+  }
+}

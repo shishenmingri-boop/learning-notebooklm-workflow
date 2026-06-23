@@ -21,6 +21,7 @@ if (args.help || args.h) {
   --skip-source-urls true   sources.mdのURLソース追加をスキップ
   --headless true           ブラウザをヘッドレスで実行
   --close-browser true      アップロード実行後すぐにブラウザを閉じる
+  --auto-continue true      Enter待ちをスキップ（ログイン完了を自動検知、他は短い待機）
   --allow-bundled-chromium true
                            Googleログイン拒否の可能性を理解した上でPlaywright同梱Chromiumを許可
 `);
@@ -28,10 +29,13 @@ if (args.help || args.h) {
 }
 const outputDir = path.resolve(args["output-dir"] || "learning-output");
 const notebookTitle = args["notebook-title"] || "学習ノート";
-const userDataDir = path.resolve(args["user-data-dir"] || ".notebooklm-playwright-profile");
+const defaultUserDataDir = path.resolve(".notebooklm-playwright-profile");
+const userDataDir = path.resolve(args["user-data-dir"] || defaultUserDataDir);
+const usingDefaultProfile = !args["user-data-dir"];
 const requestedBrowserChannel = args["browser-channel"] || args.channel || process.env.NOTEBOOKLM_BROWSER_CHANNEL || "auto";
 const executablePath = args["executable-path"] ? path.resolve(args["executable-path"]) : "";
 const allowBundledChromium = args["allow-bundled-chromium"] === "true";
+const autoContinue = args["auto-continue"] === "true";
 const headless = args.headless === "true";
 const targetFiles = (args.files ? args.files.split(",") : [
   "00_overview.md",
@@ -67,12 +71,18 @@ const result = {
     executablePath: executablePath || "",
     launchedWith: "未起動",
     userDataDir,
+    profileMode: usingDefaultProfile ? "stable-default" : "custom",
     headless,
   },
 };
 let browserContext;
 
 try {
+  result.diagnostics.push(
+    usingDefaultProfile
+      ? `既定の安定プロファイルを使用: ${userDataDir}`
+      : `カスタムプロファイルを使用: ${userDataDir}`,
+  );
   assertOutputFiles(targetFiles);
   const { chromium } = await import("playwright").catch(() => {
     throw new Error("Playwrightがインストールされていません。次を実行してください: npm install -D playwright && npx playwright install chrome");
@@ -243,11 +253,28 @@ function normalizeBrowserChannels(value) {
 
 async function checkpoint(message) {
   result.manualCheckpoints.push(message);
+  if (autoContinue) {
+    console.log(`\n[auto-continue] ${message}`);
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+    return;
+  }
   await rl.question(`\n${message}\n`);
 }
 
 async function maybeLoginCheckpoint(page) {
   if (!(await looksLikeLoginRequired(page))) return;
+  if (autoContinue) {
+    console.log("\n[auto-continue] Googleログイン待機中（最大3分）。開いたブラウザでログインしてください。");
+    const deadline = Date.now() + 180_000;
+    while (Date.now() < deadline) {
+      await page.waitForTimeout(2000);
+      if (!(await looksLikeLoginRequired(page))) {
+        await page.goto("https://notebooklm.google.com/", { waitUntil: "domcontentloaded", timeout: 60000 });
+        return;
+      }
+    }
+    throw new Error("Googleログインがタイムアウトしました。ブラウザでログイン後に再実行してください。");
+  }
   await checkpoint("Googleログインが必要です。開いたブラウザでログインを完了してからEnterを押してください。");
 }
 
@@ -260,7 +287,8 @@ async function assertGoogleLoginBrowserAccepted(page) {
     "Googleログインがブラウザを安全でないものとして拒否しました。",
     "Playwright同梱Chromiumまたは自動化検出により、`Couldn't sign you in` / `This browser or app may not be secure` が表示されています。",
     "通常のGoogle ChromeまたはMicrosoft Edgeを使って再実行してください。例: `--browser-channel chrome` または `--browser-channel msedge`。",
-    "それでも拒否される場合は、この結果ファイルの手順でNotebookLMへ手動アップロードしてください。",
+    `ログイン再利用が必要な場合は、同じプロファイル(${userDataDir})を通常ブラウザで開いてNotebookLMへ先にログインしてから再実行してください。`,
+    "それでも拒否される場合は、この結果ファイルの「最短リカバリー手順」に沿ってNotebookLMへ手動アップロードしてください。",
   ].join(" "));
 }
 
@@ -577,10 +605,26 @@ async function clickUploadEntryPoint(page) {
 
 async function writeResult() {
   fs.mkdirSync(outputDir, { recursive: true });
+  const finishedAt = new Date().toISOString();
+  const durationSec = Math.max(0, Math.round((Date.parse(finishedAt) - Date.parse(result.startedAt)) / 1000));
+  const immediateActions = buildImmediateActions();
   const lines = [
     "# NotebookLMアップロード結果",
     "",
-    `- 実行日時: ${result.startedAt}`,
+    "## 実行サマリー",
+    "",
+    `- 判定: ${result.status === "成功またはユーザー確認済み" ? "✅ 成功またはユーザー確認済み" : "❌ 失敗"}`,
+    `- 実行開始: ${result.startedAt}`,
+    `- 実行終了: ${finishedAt}`,
+    `- 所要時間(秒): ${durationSec}`,
+    `- NotebookLM URL: ${result.notebookUrl || "未取得"}`,
+    "",
+    "## 最短リカバリー手順",
+    "",
+    ...immediateActions.map((item) => `- ${item}`),
+    "",
+    "## 実行詳細",
+    "",
     `- ステータス: ${result.status}`,
     `- NotebookLM URL: ${result.notebookUrl || "未取得"}`,
     "",
@@ -590,6 +634,7 @@ async function writeResult() {
     `- 起動方式: ${result.browser.launchedWith}`,
     `- 実行ファイル: ${result.browser.executablePath || "未指定"}`,
     `- Playwrightプロファイル: ${result.browser.userDataDir}`,
+    `- プロファイルモード: ${result.browser.profileMode}`,
     `- ヘッドレス: ${result.browser.headless ? "true" : "false"}`,
     "",
     "## 投入対象ファイル",
@@ -632,7 +677,7 @@ async function writeResult() {
     "",
     result.status === "成功またはユーザー確認済み"
       ? "- NotebookLM上でソース取り込み完了を確認し、`notebooklm-prompt.md` の内容をチャットに貼り付けてください。"
-      : "- NotebookLMを開き、投入対象ファイルを手動でアップロードしてください。",
+      : "- NotebookLMを開き、上の「最短リカバリー手順」に沿って復旧してください。",
     "",
     "## 手動フォールバック手順",
     "",
@@ -645,4 +690,33 @@ async function writeResult() {
     "",
   ];
   fs.writeFileSync(resultPath, `${lines.join("\n")}\n`, "utf8");
+}
+
+function buildImmediateActions() {
+  if (result.status === "成功またはユーザー確認済み") {
+    return [
+      "NotebookLM画面でソース取り込み完了を確認する",
+      "`notebooklm-prompt.md` をNotebookLMチャットに貼り付ける",
+    ];
+  }
+
+  const googleBlocked = isGoogleLoginBlocked(result.errors);
+  if (googleBlocked) {
+    return [
+      "通常のChromeまたはEdgeで https://notebooklm.google.com/ を開き、同じプロファイルでログイン状態を作る",
+      `同じコマンドを再実行する（必要なら \`--user-data-dir "${userDataDir}"\` を明示）`,
+      "再実行でも拒否される場合は、投入対象ファイルとURLをこの結果ファイルの一覧どおり手動投入する",
+    ];
+  }
+
+  return [
+    "エラー内容を確認し、必要な手動操作をブラウザで実施する",
+    "必要なら同じコマンドを再実行する",
+    "自動化困難な場合は、投入対象ファイルとURLを手動でNotebookLMへ投入する",
+  ];
+}
+
+function isGoogleLoginBlocked(errors) {
+  const joined = (errors || []).join("\n");
+  return /Couldn't sign you in|Couldn.t sign you in|This browser or app may not be secure|安全でないブラウザ|安全でない可能性/i.test(joined);
 }

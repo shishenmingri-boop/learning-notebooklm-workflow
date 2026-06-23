@@ -1,0 +1,577 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-23T04:35:09.450Z",
+  "niche": "storage",
+  "pins": [
+    {
+      "id": "kitchen-narrow-01",
+      "status": "draft",
+      "keyword": "狭いキッチン 収納 一人暮らし",
+      "cluster": "kitchen",
+      "board": "キッチン収納",
+      "title": "狭いキッチン 収納 一人暮らし｜Before/After",
+      "description": "狭いキッチン 収納 一人暮らし の収納アイデア。 伸縮ラック を使ったBefore/After例。 詳しい比較表はリンク先へ。 #kitchen #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/kitchen-narrow",
+      "altText": "狭いキッチン 収納 一人暮らし の収納Before/After",
+      "image": {
+        "localPath": "images/kitchen-narrow-01.png",
+        "fileName": "kitchen-narrow-01.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-narrow-01.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "kitchen-narrow-02",
+      "status": "draft",
+      "keyword": "狭いキッチン 収納 一人暮らし",
+      "cluster": "kitchen",
+      "board": "キッチン収納",
+      "title": "狭いキッチン 収納 一人暮らし｜購入前チェック3点",
+      "description": "狭いキッチン 収納 一人暮らし の収納アイデア。 伸縮ラック を使ったBefore/After例。 詳しい比較表はリンク先へ。 #kitchen #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/kitchen-narrow",
+      "altText": "狭いキッチン 収納 一人暮らし の収納Before/After",
+      "image": {
+        "localPath": "images/kitchen-narrow-02.png",
+        "fileName": "kitchen-narrow-02.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-narrow-02.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "kitchen-narrow-03",
+      "status": "draft",
+      "keyword": "狭いキッチン 収納 一人暮らし",
+      "cluster": "kitchen",
+      "board": "キッチン収納",
+      "title": "狭いキッチン 収納 一人暮らし｜100均+定番の組み合わせ",
+      "description": "狭いキッチン 収納 一人暮らし の収納アイデア。 伸縮ラック を使ったBefore/After例。 詳しい比較表はリンク先へ。 #kitchen #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/kitchen-narrow",
+      "altText": "狭いキッチン 収納 一人暮らし の収納Before/After",
+      "image": {
+        "localPath": "images/kitchen-narrow-03.png",
+        "fileName": "kitchen-narrow-03.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-narrow-03.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "kitchen-sink-under-01",
+      "status": "draft",
+      "keyword": "シンク下 収納 100均",
+      "cluster": "kitchen",
+      "board": "キッチン収納",
+      "title": "シンク下 収納 100均｜Before/After",
+      "description": "シンク下 収納 100均 の収納アイデア。 引き出しケース を使ったBefore/After例。 詳しい比較表はリンク先へ。 #kitchen #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/kitchen-sink-under",
+      "altText": "シンク下 収納 100均 の収納Before/After",
+      "image": {
+        "localPath": "images/kitchen-sink-under-01.png",
+        "fileName": "kitchen-sink-under-01.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-sink-under-01.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "kitchen-sink-under-02",
+      "status": "draft",
+      "keyword": "シンク下 収納 100均",
+      "cluster": "kitchen",
+      "board": "キッチン収納",
+      "title": "シンク下 収納 100均｜購入前チェック3点",
+      "description": "シンク下 収納 100均 の収納アイデア。 引き出しケース を使ったBefore/After例。 詳しい比較表はリンク先へ。 #kitchen #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/kitchen-sink-under",
+      "altText": "シンク下 収納 100均 の収納Before/After",
+      "image": {
+        "localPath": "images/kitchen-sink-under-02.png",
+        "fileName": "kitchen-sink-under-02.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-sink-under-02.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "kitchen-sink-under-03",
+      "status": "draft",
+      "keyword": "シンク下 収納 100均",
+      "cluster": "kitchen",
+      "board": "キッチン収納",
+      "title": "シンク下 収納 100均｜100均+定番の組み合わせ",
+      "description": "シンク下 収納 100均 の収納アイデア。 引き出しケース を使ったBefore/After例。 詳しい比較表はリンク先へ。 #kitchen #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/kitchen-sink-under",
+      "altText": "シンク下 収納 100均 の収納Before/After",
+      "image": {
+        "localPath": "images/kitchen-sink-under-03.png",
+        "fileName": "kitchen-sink-under-03.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-sink-under-03.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "kitchen-spice-magnet-01",
+      "status": "draft",
+      "keyword": "調味料 マグネット収納 賃貸",
+      "cluster": "kitchen",
+      "board": "キッチン収納",
+      "title": "調味料 マグネット収納 賃貸｜Before/After",
+      "description": "調味料 マグネット収納 賃貸 の収納アイデア。 マグネットラック を使ったBefore/After例。 詳しい比較表はリンク先へ。 #kitchen #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/kitchen-spice-magnet",
+      "altText": "調味料 マグネット収納 賃貸 の収納Before/After",
+      "image": {
+        "localPath": "images/kitchen-spice-magnet-01.png",
+        "fileName": "kitchen-spice-magnet-01.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-spice-magnet-01.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "kitchen-spice-magnet-02",
+      "status": "draft",
+      "keyword": "調味料 マグネット収納 賃貸",
+      "cluster": "kitchen",
+      "board": "キッチン収納",
+      "title": "調味料 マグネット収納 賃貸｜購入前チェック3点",
+      "description": "調味料 マグネット収納 賃貸 の収納アイデア。 マグネットラック を使ったBefore/After例。 詳しい比較表はリンク先へ。 #kitchen #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/kitchen-spice-magnet",
+      "altText": "調味料 マグネット収納 賃貸 の収納Before/After",
+      "image": {
+        "localPath": "images/kitchen-spice-magnet-02.png",
+        "fileName": "kitchen-spice-magnet-02.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-spice-magnet-02.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "kitchen-spice-magnet-03",
+      "status": "draft",
+      "keyword": "調味料 マグネット収納 賃貸",
+      "cluster": "kitchen",
+      "board": "キッチン収納",
+      "title": "調味料 マグネット収納 賃貸｜100均+定番の組み合わせ",
+      "description": "調味料 マグネット収納 賃貸 の収納アイデア。 マグネットラック を使ったBefore/After例。 詳しい比較表はリンク先へ。 #kitchen #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/kitchen-spice-magnet",
+      "altText": "調味料 マグネット収納 賃貸 の収納Before/After",
+      "image": {
+        "localPath": "images/kitchen-spice-magnet-03.png",
+        "fileName": "kitchen-spice-magnet-03.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-spice-magnet-03.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "oneroom-8tatami-01",
+      "status": "draft",
+      "keyword": "ワンルーム 8畳 収納 レイアウト",
+      "cluster": "oneroom",
+      "board": "ワンルーム収納",
+      "title": "ワンルーム 8畳 収納 レイアウト｜Before/After",
+      "description": "ワンルーム 8畳 収納 レイアウト の収納アイデア。 突っ張り棒 を使ったBefore/After例。 詳しい比較表はリンク先へ。 #oneroom #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/oneroom-8tatami",
+      "altText": "ワンルーム 8畳 収納 レイアウト の収納Before/After",
+      "image": {
+        "localPath": "images/oneroom-8tatami-01.png",
+        "fileName": "oneroom-8tatami-01.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/oneroom-8tatami-01.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "oneroom-8tatami-02",
+      "status": "draft",
+      "keyword": "ワンルーム 8畳 収納 レイアウト",
+      "cluster": "oneroom",
+      "board": "ワンルーム収納",
+      "title": "ワンルーム 8畳 収納 レイアウト｜購入前チェック3点",
+      "description": "ワンルーム 8畳 収納 レイアウト の収納アイデア。 突っ張り棒 を使ったBefore/After例。 詳しい比較表はリンク先へ。 #oneroom #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/oneroom-8tatami",
+      "altText": "ワンルーム 8畳 収納 レイアウト の収納Before/After",
+      "image": {
+        "localPath": "images/oneroom-8tatami-02.png",
+        "fileName": "oneroom-8tatami-02.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/oneroom-8tatami-02.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "oneroom-8tatami-03",
+      "status": "draft",
+      "keyword": "ワンルーム 8畳 収納 レイアウト",
+      "cluster": "oneroom",
+      "board": "ワンルーム収納",
+      "title": "ワンルーム 8畳 収納 レイアウト｜100均+定番の組み合わせ",
+      "description": "ワンルーム 8畳 収納 レイアウト の収納アイデア。 突っ張り棒 を使ったBefore/After例。 詳しい比較表はリンク先へ。 #oneroom #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/oneroom-8tatami",
+      "altText": "ワンルーム 8畳 収納 レイアウト の収納Before/After",
+      "image": {
+        "localPath": "images/oneroom-8tatami-03.png",
+        "fileName": "oneroom-8tatami-03.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/oneroom-8tatami-03.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "closet-oshiire-01",
+      "status": "draft",
+      "keyword": "押入れ 収納 100均",
+      "cluster": "closet",
+      "board": "クローゼット整理",
+      "title": "押入れ 収納 100均｜Before/After",
+      "description": "押入れ 収納 100均 の収納アイデア。 収納ボックス を使ったBefore/After例。 詳しい比較表はリンク先へ。 #closet #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/closet-oshiire",
+      "altText": "押入れ 収納 100均 の収納Before/After",
+      "image": {
+        "localPath": "images/closet-oshiire-01.png",
+        "fileName": "closet-oshiire-01.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-oshiire-01.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "closet-oshiire-02",
+      "status": "draft",
+      "keyword": "押入れ 収納 100均",
+      "cluster": "closet",
+      "board": "クローゼット整理",
+      "title": "押入れ 収納 100均｜購入前チェック3点",
+      "description": "押入れ 収納 100均 の収納アイデア。 収納ボックス を使ったBefore/After例。 詳しい比較表はリンク先へ。 #closet #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/closet-oshiire",
+      "altText": "押入れ 収納 100均 の収納Before/After",
+      "image": {
+        "localPath": "images/closet-oshiire-02.png",
+        "fileName": "closet-oshiire-02.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-oshiire-02.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "closet-oshiire-03",
+      "status": "draft",
+      "keyword": "押入れ 収納 100均",
+      "cluster": "closet",
+      "board": "クローゼット整理",
+      "title": "押入れ 収納 100均｜100均+定番の組み合わせ",
+      "description": "押入れ 収納 100均 の収納アイデア。 収納ボックス を使ったBefore/After例。 詳しい比較表はリンク先へ。 #closet #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/closet-oshiire",
+      "altText": "押入れ 収納 100均 の収納Before/After",
+      "image": {
+        "localPath": "images/closet-oshiire-03.png",
+        "fileName": "closet-oshiire-03.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-oshiire-03.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "closet-clothes-01",
+      "status": "draft",
+      "keyword": "クローゼット 洋服 コンパクト",
+      "cluster": "closet",
+      "board": "クローゼット整理",
+      "title": "クローゼット 洋服 コンパクト｜Before/After",
+      "description": "クローゼット 洋服 コンパクト の収納アイデア。 スリムハンガー を使ったBefore/After例。 詳しい比較表はリンク先へ。 #closet #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/closet-clothes",
+      "altText": "クローゼット 洋服 コンパクト の収納Before/After",
+      "image": {
+        "localPath": "images/closet-clothes-01.png",
+        "fileName": "closet-clothes-01.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-clothes-01.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "closet-clothes-02",
+      "status": "draft",
+      "keyword": "クローゼット 洋服 コンパクト",
+      "cluster": "closet",
+      "board": "クローゼット整理",
+      "title": "クローゼット 洋服 コンパクト｜購入前チェック3点",
+      "description": "クローゼット 洋服 コンパクト の収納アイデア。 スリムハンガー を使ったBefore/After例。 詳しい比較表はリンク先へ。 #closet #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/closet-clothes",
+      "altText": "クローゼット 洋服 コンパクト の収納Before/After",
+      "image": {
+        "localPath": "images/closet-clothes-02.png",
+        "fileName": "closet-clothes-02.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-clothes-02.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "closet-clothes-03",
+      "status": "draft",
+      "keyword": "クローゼット 洋服 コンパクト",
+      "cluster": "closet",
+      "board": "クローゼット整理",
+      "title": "クローゼット 洋服 コンパクト｜100均+定番の組み合わせ",
+      "description": "クローゼット 洋服 コンパクト の収納アイデア。 スリムハンガー を使ったBefore/After例。 詳しい比較表はリンク先へ。 #closet #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/closet-clothes",
+      "altText": "クローゼット 洋服 コンパクト の収納Before/After",
+      "image": {
+        "localPath": "images/closet-clothes-03.png",
+        "fileName": "closet-clothes-03.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-clothes-03.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "entry-shoes-01",
+      "status": "draft",
+      "keyword": "玄関 靴 収納 狭い",
+      "cluster": "entry",
+      "board": "玄関収納",
+      "title": "玄関 靴 収納 狭い｜Before/After",
+      "description": "玄関 靴 収納 狭い の収納アイデア。 スリムシューズラック を使ったBefore/After例。 詳しい比較表はリンク先へ。 #entry #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/entry-shoes",
+      "altText": "玄関 靴 収納 狭い の収納Before/After",
+      "image": {
+        "localPath": "images/entry-shoes-01.png",
+        "fileName": "entry-shoes-01.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/entry-shoes-01.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "entry-shoes-02",
+      "status": "draft",
+      "keyword": "玄関 靴 収納 狭い",
+      "cluster": "entry",
+      "board": "玄関収納",
+      "title": "玄関 靴 収納 狭い｜購入前チェック3点",
+      "description": "玄関 靴 収納 狭い の収納アイデア。 スリムシューズラック を使ったBefore/After例。 詳しい比較表はリンク先へ。 #entry #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/entry-shoes",
+      "altText": "玄関 靴 収納 狭い の収納Before/After",
+      "image": {
+        "localPath": "images/entry-shoes-02.png",
+        "fileName": "entry-shoes-02.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/entry-shoes-02.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "entry-shoes-03",
+      "status": "draft",
+      "keyword": "玄関 靴 収納 狭い",
+      "cluster": "entry",
+      "board": "玄関収納",
+      "title": "玄関 靴 収納 狭い｜100均+定番の組み合わせ",
+      "description": "玄関 靴 収納 狭い の収納アイデア。 スリムシューズラック を使ったBefore/After例。 詳しい比較表はリンク先へ。 #entry #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/entry-shoes",
+      "altText": "玄関 靴 収納 狭い の収納Before/After",
+      "image": {
+        "localPath": "images/entry-shoes-03.png",
+        "fileName": "entry-shoes-03.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/entry-shoes-03.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "bath-vanity-under-01",
+      "status": "draft",
+      "keyword": "洗面台 下 収納 100均",
+      "cluster": "bath",
+      "board": "洗面収納",
+      "title": "洗面台 下 収納 100均｜Before/After",
+      "description": "洗面台 下 収納 100均 の収納アイデア。 引き出し を使ったBefore/After例。 詳しい比較表はリンク先へ。 #bath #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/bath-vanity-under",
+      "altText": "洗面台 下 収納 100均 の収納Before/After",
+      "image": {
+        "localPath": "images/bath-vanity-under-01.png",
+        "fileName": "bath-vanity-under-01.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/bath-vanity-under-01.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "bath-vanity-under-02",
+      "status": "draft",
+      "keyword": "洗面台 下 収納 100均",
+      "cluster": "bath",
+      "board": "洗面収納",
+      "title": "洗面台 下 収納 100均｜購入前チェック3点",
+      "description": "洗面台 下 収納 100均 の収納アイデア。 引き出し を使ったBefore/After例。 詳しい比較表はリンク先へ。 #bath #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/bath-vanity-under",
+      "altText": "洗面台 下 収納 100均 の収納Before/After",
+      "image": {
+        "localPath": "images/bath-vanity-under-02.png",
+        "fileName": "bath-vanity-under-02.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/bath-vanity-under-02.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "bath-vanity-under-03",
+      "status": "draft",
+      "keyword": "洗面台 下 収納 100均",
+      "cluster": "bath",
+      "board": "洗面収納",
+      "title": "洗面台 下 収納 100均｜100均+定番の組み合わせ",
+      "description": "洗面台 下 収納 100均 の収納アイデア。 引き出し を使ったBefore/After例。 詳しい比較表はリンク先へ。 #bath #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/bath-vanity-under",
+      "altText": "洗面台 下 収納 100均 の収納Before/After",
+      "image": {
+        "localPath": "images/bath-vanity-under-03.png",
+        "fileName": "bath-vanity-under-03.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/bath-vanity-under-03.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "rental-wall-01",
+      "status": "draft",
+      "keyword": "原状回復OK 賃貸 壁面収納",
+      "cluster": "rental",
+      "board": "賃貸OK収納",
+      "title": "原状回復OK 賃貸 壁面収納｜Before/After",
+      "description": "原状回復OK 賃貸 壁面収納 の収納アイデア。 突っ張り棒 を使ったBefore/After例。 詳しい比較表はリンク先へ。 #rental #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/rental-wall",
+      "altText": "原状回復OK 賃貸 壁面収納 の収納Before/After",
+      "image": {
+        "localPath": "images/rental-wall-01.png",
+        "fileName": "rental-wall-01.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/rental-wall-01.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "rental-wall-02",
+      "status": "draft",
+      "keyword": "原状回復OK 賃貸 壁面収納",
+      "cluster": "rental",
+      "board": "賃貸OK収納",
+      "title": "原状回復OK 賃貸 壁面収納｜購入前チェック3点",
+      "description": "原状回復OK 賃貸 壁面収納 の収納アイデア。 突っ張り棒 を使ったBefore/After例。 詳しい比較表はリンク先へ。 #rental #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/rental-wall",
+      "altText": "原状回復OK 賃貸 壁面収納 の収納Before/After",
+      "image": {
+        "localPath": "images/rental-wall-02.png",
+        "fileName": "rental-wall-02.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/rental-wall-02.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "rental-wall-03",
+      "status": "draft",
+      "keyword": "原状回復OK 賃貸 壁面収納",
+      "cluster": "rental",
+      "board": "賃貸OK収納",
+      "title": "原状回復OK 賃貸 壁面収納｜100均+定番の組み合わせ",
+      "description": "原状回復OK 賃貸 壁面収納 の収納アイデア。 突っ張り棒 を使ったBefore/After例。 詳しい比較表はリンク先へ。 #rental #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/rental-wall",
+      "altText": "原状回復OK 賃貸 壁面収納 の収納Before/After",
+      "image": {
+        "localPath": "images/rental-wall-03.png",
+        "fileName": "rental-wall-03.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/rental-wall-03.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "living-cable-01",
+      "status": "draft",
+      "keyword": "テレビ 配線 隠す 収納",
+      "cluster": "living",
+      "board": "リビング収納",
+      "title": "テレビ 配線 隠す 収納｜Before/After",
+      "description": "テレビ 配線 隠す 収納 の収納アイデア。 配線ボックス を使ったBefore/After例。 詳しい比較表はリンク先へ。 #living #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/living-cable",
+      "altText": "テレビ 配線 隠す 収納 の収納Before/After",
+      "image": {
+        "localPath": "images/living-cable-01.png",
+        "fileName": "living-cable-01.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/living-cable-01.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "living-cable-02",
+      "status": "draft",
+      "keyword": "テレビ 配線 隠す 収納",
+      "cluster": "living",
+      "board": "リビング収納",
+      "title": "テレビ 配線 隠す 収納｜購入前チェック3点",
+      "description": "テレビ 配線 隠す 収納 の収納アイデア。 配線ボックス を使ったBefore/After例。 詳しい比較表はリンク先へ。 #living #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/living-cable",
+      "altText": "テレビ 配線 隠す 収納 の収納Before/After",
+      "image": {
+        "localPath": "images/living-cable-02.png",
+        "fileName": "living-cable-02.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/living-cable-02.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    },
+    {
+      "id": "living-cable-03",
+      "status": "draft",
+      "keyword": "テレビ 配線 隠す 収納",
+      "cluster": "living",
+      "board": "リビング収納",
+      "title": "テレビ 配線 隠す 収納｜100均+定番の組み合わせ",
+      "description": "テレビ 配線 隠す 収納 の収納アイデア。 配線ボックス を使ったBefore/After例。 詳しい比較表はリンク先へ。 #living #収納 #一人暮らし #賃貸",
+      "link": "https://note.com/your-account/n/living-cable",
+      "altText": "テレビ 配線 隠す 収納 の収納Before/After",
+      "image": {
+        "localPath": "images/living-cable-03.png",
+        "fileName": "living-cable-03.png",
+        "publicUrl": "https://your-cdn.example.com/pinterest-storage/living-cable-03.png"
+      },
+      "publishAt": "",
+      "postedPinId": "",
+      "lastError": ""
+    }
+  ]
+}

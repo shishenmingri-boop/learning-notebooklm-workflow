@@ -147,6 +147,74 @@ NotebookLMはSPAのため、画面表示直後に `新規作成` ボタンがま
 
 それでも止まった場合は、開いているブラウザで `新規作成` を押して新規ノートを作成し、ノート画面まで進んでからターミナルでEnterを押してください。アップロードで止まった場合は、`ファイルをアップロード` を押して対象ファイルを選択してからEnterを押してください。URLソース追加で止まった場合は、`notebooklm-upload-result.md` の `URLソース追加対象` に出ているURLをNotebookLMへ手動追加してからEnterを押してください。`クイズ` で止まった場合は、ブラウザで `クイズ` を押してからEnterを押してください。
 
+## Pinterest収納パイプライン（Phase 1 + 2）
+
+別端末への引き継ぎは [`content-queue/HANDOFF.md`](content-queue/HANDOFF.md) を参照。
+
+収納特化の `keywords.csv` から note 下書き・ピン JSON を生成し、Pinterest API v5 で投稿します。
+
+### 1. 初期設定
+
+```bash
+cp .env.example .env
+cp content-queue/config.example.json content-queue/config.json
+```
+
+`.env` に `PINTEREST_APP_ID` / `PINTEREST_APP_SECRET` を設定します。Pinterest Developer Portal で Redirect URI に `http://localhost:8765/callback` を登録してください。
+
+`content-queue/config.json` の `noteBaseUrl` と `imagePublicBaseUrl` を自分の note / CDN URL に更新します。
+
+### 2. コンテンツ生成
+
+```bash
+npm run pinterest:generate
+```
+
+生成物:
+
+- `content-queue/notes/*.md`
+- `content-queue/pins/*.json`
+- `content-queue/manifest.json`
+
+### 3. 画像生成（Flux / Replicate）
+
+`.env` に [Replicate](https://replicate.com/account/api-tokens) の `REPLICATE_API_TOKEN` を設定します。
+
+```bash
+npm run pinterest:images:dry-run
+npm run pinterest:images
+```
+
+1件だけ試す場合:
+
+```bash
+node scripts/pinterest_generate_images.mjs --pin-id kitchen-narrow-01
+```
+
+モデルは `content-queue/config.json` の `flux.model` で変更できます。コスト重視なら `black-forest-labs/flux-schnell` に差し替え可能です。
+
+### 4. 画像を CDN へ配置
+
+`content-queue/images/` の PNG を CDN にアップロードし、`image.publicUrl` が公開 URL になるようにします。
+
+### 5. OAuth と投稿
+
+```bash
+npm run pinterest:auth
+npm run pinterest:boards
+npm run pinterest:post:dry-run
+npm run pinterest:post
+```
+
+Sandbox で試す場合:
+
+```bash
+node scripts/pinterest_api_post.mjs --action auth --sandbox true
+node scripts/pinterest_api_post.mjs --action post-queue --dry-run false --sandbox true
+```
+
+結果は `content-queue/pipeline-result.md` と `content-queue/post-result.md` に記録されます。
+
 ## 手動フォールバック
 
 自動化できない場合でも、生成済みMarkdownはそのままNotebookLMに投入できます。
