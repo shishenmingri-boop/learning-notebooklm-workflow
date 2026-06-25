@@ -11,6 +11,9 @@
     "pinterest:boards": "node scripts/pinterest_api_post.mjs --action boards",
     "pinterest:post:dry-run": "node scripts/pinterest_api_post.mjs --action post-queue --dry-run true",
     "pinterest:post": "node scripts/pinterest_api_post.mjs --action post-queue --dry-run false",
+    "note:publish:dry-run": "node scripts/note_web_publish.mjs --dry-run true",
+    "note:publish:draft": "node scripts/note_web_publish.mjs --mode draft --dry-run false",
+    "note:publish": "node scripts/note_web_publish.mjs --mode publish --dry-run false",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
