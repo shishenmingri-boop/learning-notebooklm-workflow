@@ -19,6 +19,11 @@ if (args.help || args.h) {
   --source-url-file FILE    NotebookLMへURLソースとして追加するURL一覧元。既定: sources.md
   --source-urls URLS        URLソースとして追加するURLをカンマ区切りで直接指定
   --skip-source-urls true   sources.mdのURLソース追加をスキップ
+  --deep-research-query-file FILE
+                           NotebookLM Deep Research用クエリ一覧元（"==="区切りで複数指定）。既定: deep-research-queries.txt
+  --deep-research-queries Q1|||Q2
+                           Deep Research用クエリを "|||" 区切りで直接指定
+  --skip-deep-research true Deep Researchの実行をスキップ
   --headless true           ブラウザをヘッドレスで実行
   --close-browser true      アップロード実行後すぐにブラウザを閉じる
   --auto-continue true      Enter待ちをスキップ（ログイン完了を自動検知、他は短い待機）
@@ -51,6 +56,16 @@ const targetSourceUrls = args["skip-source-urls"] === "true"
   ? []
   : (args["source-urls"] ? parseUrlList(args["source-urls"]) : extractUrlsFromFile(sourceUrlFile));
 
+const deepResearchQueryFile = args["deep-research-query-file"]
+  ? (path.isAbsolute(args["deep-research-query-file"]) ? args["deep-research-query-file"] : path.resolve(outputDir, args["deep-research-query-file"]))
+  : path.resolve(outputDir, "deep-research-queries.txt");
+const skipDeepResearch = args["skip-deep-research"] === "true";
+const deepResearchQueries = skipDeepResearch
+  ? []
+  : (args["deep-research-queries"]
+    ? parseQueryList(args["deep-research-queries"])
+    : extractQueriesFromFile(deepResearchQueryFile));
+
 const resultPath = path.resolve(outputDir, "notebooklm-upload-result.md");
 const rl = readline.createInterface({ input, output });
 const result = {
@@ -62,6 +77,11 @@ const result = {
   targetSourceUrls,
   uploadedSourceUrls: [],
   failedSourceUrls: [],
+  deepResearch: {
+    targetQueries: deepResearchQueries,
+    completedQueries: [],
+    failedQueries: [],
+  },
   quizAction: "未実行",
   manualCheckpoints: [],
   errors: [],
@@ -103,6 +123,9 @@ try {
   await maybeSetTitle(page, notebookTitle);
   await uploadFiles(page, targetFiles);
   await addSourceUrls(page, targetSourceUrls);
+  await dismissLingeringOverlay(page);
+  await runDeepResearch(page, deepResearchQueries);
+  await dismissLingeringOverlay(page);
   await clickQuiz(page);
 
   result.status = "成功またはユーザー確認済み";
@@ -171,6 +194,22 @@ function extractUrlsFromFile(file) {
 
 function uniqueUrls(urls) {
   return [...new Set(urls.filter(Boolean))];
+}
+
+function parseQueryList(value) {
+  return String(value || "")
+    .split("|||")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function extractQueriesFromFile(file) {
+  if (!fs.existsSync(file)) return [];
+  const content = fs.readFileSync(file, "utf8");
+  return content
+    .split(/^===$/m)
+    .map((item) => item.trim())
+    .filter(Boolean);
 }
 
 async function launchPersistentContext(chromium) {
@@ -557,6 +596,130 @@ async function clickFirstVisible(candidates, timeoutMs, label) {
   }
 }
 
+async function dismissLingeringOverlay(page) {
+  const overlay = page.locator(".cdk-overlay-backdrop").first();
+  if (await overlay.count().catch(() => 0)) {
+    await page.keyboard.press("Escape").catch(() => {});
+    await page.waitForTimeout(500);
+  }
+  if (await overlay.count().catch(() => 0)) {
+    await overlay.click({ timeout: 3000, force: true }).catch(() => {});
+    await page.waitForTimeout(500);
+  }
+}
+
+async function runDeepResearch(page, queries) {
+  if (queries.length === 0) {
+    result.diagnostics.push("NotebookLM Deep Research対象クエリ: なし");
+    return;
+  }
+
+  result.diagnostics.push(`NotebookLM Deep Research対象クエリ: ${queries.length}件`);
+
+  for (const query of queries) {
+    try {
+      await dismissLingeringOverlay(page);
+      await runSingleDeepResearch(page, query);
+      result.deepResearch.completedQueries.push(query);
+      result.diagnostics.push(`Deep Research実行成功: ${query.slice(0, 40)}...`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      result.deepResearch.failedQueries.push(`${query} (${message})`);
+      result.diagnostics.push(`Deep Research実行失敗: ${message}`);
+      await checkpoint([
+        "NotebookLM Deep Researchの自動実行を完了できませんでした。",
+        "この機能は2025年11月に追加された新しいUIのため、セレクタが変わっている可能性があります。",
+        "開いている画面で「ソースを追加」→「Web」→「Deep Research」を選び、次のクエリを手動で実行してからEnterを押してください（スキップする場合もEnterを押してください）。",
+        "",
+        query,
+      ].join("\n"));
+    }
+  }
+}
+
+async function runSingleDeepResearch(page, query) {
+  await clickAddSourceEntryPoint(page);
+  await page.waitForTimeout(1000);
+  await clickWebEntryPoint(page);
+  await page.waitForTimeout(500);
+  await clickDeepResearchModeEntryPoint(page);
+  await page.waitForTimeout(500);
+
+  const input = await findDeepResearchQueryInput(page);
+  await input.fill(query, { timeout: 5000 });
+
+  await clickSubmitDeepResearch(page);
+
+  await waitForDeepResearchReport(page, 240000);
+  await importDeepResearchResults(page);
+}
+
+async function clickWebEntryPoint(page) {
+  const candidates = [
+    { label: "role button: Web", locator: () => page.getByRole("button", { name: /^web$/i }).first() },
+    { label: "role tab: Web", locator: () => page.getByRole("tab", { name: /^web$/i }).first() },
+    { label: "text: Web", locator: () => page.getByText(/^web$/i).first() },
+  ];
+
+  await clickFirstVisible(candidates, 10000, "Webソース入口");
+}
+
+async function clickDeepResearchModeEntryPoint(page) {
+  const candidates = [
+    { label: "role button: Deep Research", locator: () => page.getByRole("button", { name: /deep research/i }).first() },
+    { label: "role tab: Deep Research", locator: () => page.getByRole("tab", { name: /deep research/i }).first() },
+    { label: "text: Deep Research", locator: () => page.getByText(/deep research/i).first() },
+  ];
+
+  await clickFirstVisible(candidates, 10000, "Deep Researchモード選択");
+}
+
+async function findDeepResearchQueryInput(page) {
+  const candidates = [
+    { label: "textbox: Deep Research query", locator: () => page.getByRole("textbox", { name: /research|query|質問|調査|トピック/i }).first() },
+    { label: "textarea placeholder research", locator: () => page.locator("textarea[placeholder*='research' i], textarea[placeholder*='調査' i]").first() },
+    { label: "first visible textbox", locator: () => page.getByRole("textbox").first() },
+  ];
+
+  const ready = await waitForAnyLocator(candidates, 10000);
+  if (!ready) {
+    const counts = await locatorCounts(candidates);
+    throw new Error(`Deep Research入力欄を検出できませんでした: ${counts.join(", ")}`);
+  }
+  return ready.locator;
+}
+
+async function clickSubmitDeepResearch(page) {
+  const candidates = [
+    { label: "role button: 開始/実行/送信", locator: () => page.getByRole("button", { name: /開始|実行|調査を開始|research|submit|send|start/i }).last() },
+  ];
+
+  await clickFirstVisible(candidates, 10000, "Deep Research実行ボタン");
+}
+
+async function waitForDeepResearchReport(page, timeoutMs) {
+  const candidates = [
+    { label: "role button: インポート", locator: () => page.getByRole("button", { name: /インポート|import|ソースを追加|add sources/i }).first() },
+    { label: "text: レポート完了", locator: () => page.getByText(/レポート|report/i).first() },
+  ];
+
+  const ready = await waitForAnyLocator(candidates, timeoutMs);
+  if (!ready) {
+    const counts = await locatorCounts(candidates);
+    throw new Error(`Deep Researchレポート完了を検出できませんでした（最大${Math.round(timeoutMs / 1000)}秒待機): ${counts.join(", ")}`);
+  }
+}
+
+async function importDeepResearchResults(page) {
+  const candidates = [
+    { label: "role button: すべてインポート", locator: () => page.getByRole("button", { name: /すべて.*インポート|import all|すべて追加/i }).first() },
+    { label: "role button: インポート", locator: () => page.getByRole("button", { name: /インポート|import/i }).first() },
+  ];
+
+  await clickFirstVisible(candidates, 15000, "Deep Researchレポート取り込み");
+  await page.waitForTimeout(2000);
+}
+
 async function clickQuiz(page) {
   const candidates = [
     { label: "role button: クイズ", locator: () => page.getByRole("button", { name: /クイズ|quiz/i }).first() },
@@ -657,6 +820,18 @@ async function writeResult() {
     "",
     ...(result.failedSourceUrls.length ? result.failedSourceUrls.map((url) => `- ${url}`) : ["- なし"]),
     "",
+    "## Deep Research対象クエリ",
+    "",
+    ...(result.deepResearch.targetQueries.length ? result.deepResearch.targetQueries.map((query) => `- ${query}`) : ["- なし"]),
+    "",
+    "## Deep Research実行成功",
+    "",
+    ...(result.deepResearch.completedQueries.length ? result.deepResearch.completedQueries.map((query) => `- ${query}`) : ["- なし"]),
+    "",
+    "## Deep Research実行失敗",
+    "",
+    ...(result.deepResearch.failedQueries.length ? result.deepResearch.failedQueries.map((item) => `- ${item}`) : ["- なし"]),
+    "",
     "## クイズ操作",
     "",
     `- ${result.quizAction}`,
@@ -685,8 +860,9 @@ async function writeResult() {
     `2. 新しいノートを作成し、ノート名を \`${notebookTitle}\` にします。`,
     "3. 上記の投入対象ファイルをソースとしてアップロードします。",
     "4. 上記のURLソース追加対象をソースとして追加します。",
-    "5. `notebooklm-prompt.md` の内容をNotebookLMのチャットに貼り付けます。",
-    "6. 学習ロードマップ、概念説明、クイズ、弱点復習計画を生成します。",
+    "5. 「ソースを追加」→「Web」→「Deep Research」から、上記のDeep Research対象クエリを実行し、レポートをインポートします。",
+    "6. `notebooklm-prompt.md` の内容をNotebookLMのチャットに貼り付けます。",
+    "7. 学習ロードマップ、概念説明、クイズ、弱点復習計画を生成します。",
     "",
   ];
   fs.writeFileSync(resultPath, `${lines.join("\n")}\n`, "utf8");
