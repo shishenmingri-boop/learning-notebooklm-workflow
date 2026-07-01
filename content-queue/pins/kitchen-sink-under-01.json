@@ -11,7 +11,22 @@
   "image": {
     "localPath": "images/kitchen-sink-under-01.png",
     "fileName": "kitchen-sink-under-01.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-sink-under-01.png"
+    "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-sink-under-01.png",
+    "flux": {
+      "model": "black-forest-labs/flux-1.1-pro",
+      "predictionId": "hptstjc0shrmt0cz3tet9vqt6m",
+      "prompt": "a small Japanese apartment kitchen with cabinets and sink, split-screen before-and-after organization, left cluttered and right tidy, theme: シンク下 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+      "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+      "generatedAt": "2026-07-01T16:57:52.195Z"
+    },
+    "cdn": {
+      "provider": "r2",
+      "bucket": "pinterest-storage",
+      "key": "pinterest-storage/kitchen-sink-under-01.png",
+      "etag": "\"073b890b5a2601b5e2beb82d28f88fd1\"",
+      "size": 1042869,
+      "uploadedAt": "2026-07-01T17:16:11.867Z"
+    }
   },
   "publishAt": "",
   "postedPinId": "",

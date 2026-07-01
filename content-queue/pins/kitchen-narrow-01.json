@@ -11,7 +11,22 @@
   "image": {
     "localPath": "images/kitchen-narrow-01.png",
     "fileName": "kitchen-narrow-01.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-narrow-01.png"
+    "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-narrow-01.png",
+    "flux": {
+      "model": "black-forest-labs/flux-1.1-pro",
+      "predictionId": "hv36g4etydrmy0cz3tdrtpk3e0",
+      "prompt": "a small Japanese apartment kitchen with cabinets and sink, split-screen before-and-after organization, left cluttered and right tidy, theme: 狭いキッチン 収納 一人暮らし, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+      "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+      "generatedAt": "2026-07-01T16:56:03.805Z"
+    },
+    "cdn": {
+      "provider": "r2",
+      "bucket": "pinterest-storage",
+      "key": "pinterest-storage/kitchen-narrow-01.png",
+      "etag": "\"546519711f862776e0ef361a3b40542a\"",
+      "size": 1124637,
+      "uploadedAt": "2026-07-01T17:16:11.390Z"
+    }
   },
   "publishAt": "",
   "postedPinId": "",

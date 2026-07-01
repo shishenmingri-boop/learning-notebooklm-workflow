@@ -11,7 +11,22 @@
   "image": {
     "localPath": "images/closet-oshiire-03.png",
     "fileName": "closet-oshiire-03.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-oshiire-03.png"
+    "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/closet-oshiire-03.png",
+    "flux": {
+      "model": "black-forest-labs/flux-1.1-pro",
+      "predictionId": "nfmt96vhbsrmw0cz3tg89g5f60",
+      "prompt": "a small closet and wardrobe storage area, close-up detail of practical storage products on shelves, theme: 押入れ 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+      "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+      "generatedAt": "2026-07-01T17:01:04.463Z"
+    },
+    "cdn": {
+      "provider": "r2",
+      "bucket": "pinterest-storage",
+      "key": "pinterest-storage/closet-oshiire-03.png",
+      "etag": "\"b8760592a71d7f05dce25603663a9bbb\"",
+      "size": 1360346,
+      "uploadedAt": "2026-07-01T17:16:14.498Z"
+    }
   },
   "publishAt": "",
   "postedPinId": "",

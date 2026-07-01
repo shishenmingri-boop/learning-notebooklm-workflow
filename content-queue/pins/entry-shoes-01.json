@@ -11,7 +11,22 @@
   "image": {
     "localPath": "images/entry-shoes-01.png",
     "fileName": "entry-shoes-01.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/entry-shoes-01.png"
+    "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/entry-shoes-01.png",
+    "flux": {
+      "model": "black-forest-labs/flux-1.1-pro",
+      "predictionId": "zd063c4k0xrmt0cz3tgt10smmr",
+      "prompt": "a narrow apartment entryway with shoe storage, split-screen before-and-after organization, left cluttered and right tidy, theme: 玄関 靴 収納 狭い, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+      "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+      "generatedAt": "2026-07-01T17:02:18.735Z"
+    },
+    "cdn": {
+      "provider": "r2",
+      "bucket": "pinterest-storage",
+      "key": "pinterest-storage/entry-shoes-01.png",
+      "etag": "\"2e3ca4b636a0844956c6aa588c359deb\"",
+      "size": 1436657,
+      "uploadedAt": "2026-07-01T17:16:15.285Z"
+    }
   },
   "publishAt": "",
   "postedPinId": "",

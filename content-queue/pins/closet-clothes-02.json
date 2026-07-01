@@ -11,7 +11,22 @@
   "image": {
     "localPath": "images/closet-clothes-02.png",
     "fileName": "closet-clothes-02.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-clothes-02.png"
+    "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/closet-clothes-02.png",
+    "flux": {
+      "model": "black-forest-labs/flux-1.1-pro",
+      "predictionId": "zcs2ns02v9rmr0cz3tgt8nc3br",
+      "prompt": "a small closet and wardrobe storage area, clean organized after photo, minimalist storage boxes and labels, theme: クローゼット 洋服 コンパクト, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+      "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+      "generatedAt": "2026-07-01T17:01:43.983Z"
+    },
+    "cdn": {
+      "provider": "r2",
+      "bucket": "pinterest-storage",
+      "key": "pinterest-storage/closet-clothes-02.png",
+      "etag": "\"3d3342eec5b79508da7db233f7e2cf65\"",
+      "size": 1308434,
+      "uploadedAt": "2026-07-01T17:16:14.903Z"
+    }
   },
   "publishAt": "",
   "postedPinId": "",

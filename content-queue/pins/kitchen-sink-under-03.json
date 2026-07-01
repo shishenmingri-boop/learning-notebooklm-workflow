@@ -11,7 +11,22 @@
   "image": {
     "localPath": "images/kitchen-sink-under-03.png",
     "fileName": "kitchen-sink-under-03.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-sink-under-03.png"
+    "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-sink-under-03.png",
+    "flux": {
+      "model": "black-forest-labs/flux-1.1-pro",
+      "predictionId": "qsm6earatnrmy0cz3tf8ttx2v0",
+      "prompt": "a small Japanese apartment kitchen with cabinets and sink, close-up detail of practical storage products on shelves, theme: シンク下 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+      "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+      "generatedAt": "2026-07-01T16:58:27.146Z"
+    },
+    "cdn": {
+      "provider": "r2",
+      "bucket": "pinterest-storage",
+      "key": "pinterest-storage/kitchen-sink-under-03.png",
+      "etag": "\"f7fcb4a6855d807da6c79edb78320a94\"",
+      "size": 1247083,
+      "uploadedAt": "2026-07-01T17:16:12.576Z"
+    }
   },
   "publishAt": "",
   "postedPinId": "",

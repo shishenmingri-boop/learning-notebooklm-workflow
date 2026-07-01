@@ -11,7 +11,22 @@
   "image": {
     "localPath": "images/rental-wall-02.png",
     "fileName": "rental-wall-02.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/rental-wall-02.png"
+    "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/rental-wall-02.png",
+    "flux": {
+      "model": "black-forest-labs/flux-1.1-pro",
+      "predictionId": "c0msw9mddsrmy0cz3thttfq2ew",
+      "prompt": "a rental-friendly apartment interior with no wall damage, clean organized after photo, minimalist storage boxes and labels, theme: 原状回復OK 賃貸 壁面収納, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+      "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+      "generatedAt": "2026-07-01T17:04:28.227Z"
+    },
+    "cdn": {
+      "provider": "r2",
+      "bucket": "pinterest-storage",
+      "key": "pinterest-storage/rental-wall-02.png",
+      "etag": "\"1fce2807bdcf3429bb82d4598dfe0723\"",
+      "size": 1335839,
+      "uploadedAt": "2026-07-01T17:16:16.487Z"
+    }
   },
   "publishAt": "",
   "postedPinId": "",

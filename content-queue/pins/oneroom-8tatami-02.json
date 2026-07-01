@@ -11,7 +11,22 @@
   "image": {
     "localPath": "images/oneroom-8tatami-02.png",
     "fileName": "oneroom-8tatami-02.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/oneroom-8tatami-02.png"
+    "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/oneroom-8tatami-02.png",
+    "flux": {
+      "model": "black-forest-labs/flux-1.1-pro",
+      "predictionId": "72nj4g33d5rmt0cz3tfs2q9m5r",
+      "prompt": "a compact one-room studio apartment in Japan, clean organized after photo, minimalist storage boxes and labels, theme: ワンルーム 8畳 収納 レイアウト, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+      "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+      "generatedAt": "2026-07-01T16:59:55.414Z"
+    },
+    "cdn": {
+      "provider": "r2",
+      "bucket": "pinterest-storage",
+      "key": "pinterest-storage/oneroom-8tatami-02.png",
+      "etag": "\"153c800a7183f9a1327f6a1a37c55a9c\"",
+      "size": 1349407,
+      "uploadedAt": "2026-07-01T17:16:13.837Z"
+    }
   },
   "publishAt": "",
   "postedPinId": "",

@@ -11,7 +11,22 @@
   "image": {
     "localPath": "images/bath-vanity-under-03.png",
     "fileName": "bath-vanity-under-03.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/bath-vanity-under-03.png"
+    "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/bath-vanity-under-03.png",
+    "flux": {
+      "model": "black-forest-labs/flux-1.1-pro",
+      "predictionId": "79fedw7xjxrmy0cz3th88mjns8",
+      "prompt": "a small bathroom vanity with under-sink storage, close-up detail of practical storage products on shelves, theme: 洗面台 下 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+      "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+      "generatedAt": "2026-07-01T17:03:51.202Z"
+    },
+    "cdn": {
+      "provider": "r2",
+      "bucket": "pinterest-storage",
+      "key": "pinterest-storage/bath-vanity-under-03.png",
+      "etag": "\"44a2b33ddfcc7898ceec8aed793eb1bb\"",
+      "size": 1301697,
+      "uploadedAt": "2026-07-01T17:16:16.095Z"
+    }
   },
   "publishAt": "",
   "postedPinId": "",

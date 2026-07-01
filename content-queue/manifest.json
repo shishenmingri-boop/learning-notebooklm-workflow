@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-23T04:35:09.450Z",
+  "generatedAt": "2026-07-01T16:52:43.249Z",
   "niche": "storage",
   "pins": [
     {
@@ -16,7 +16,22 @@
       "image": {
         "localPath": "images/kitchen-narrow-01.png",
         "fileName": "kitchen-narrow-01.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-narrow-01.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-narrow-01.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "hv36g4etydrmy0cz3tdrtpk3e0",
+          "prompt": "a small Japanese apartment kitchen with cabinets and sink, split-screen before-and-after organization, left cluttered and right tidy, theme: 狭いキッチン 収納 一人暮らし, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:56:03.805Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/kitchen-narrow-01.png",
+          "etag": "\"546519711f862776e0ef361a3b40542a\"",
+          "size": 1124637,
+          "uploadedAt": "2026-07-01T17:16:11.390Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -35,7 +50,22 @@
       "image": {
         "localPath": "images/kitchen-narrow-02.png",
         "fileName": "kitchen-narrow-02.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-narrow-02.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-narrow-02.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "36f9yzztmhrmr0cz3tebtv3acg",
+          "prompt": "a small Japanese apartment kitchen with cabinets and sink, clean organized after photo, minimalist storage boxes and labels, theme: 狭いキッチン 収納 一人暮らし, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:57:17.353Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/kitchen-narrow-02.png",
+          "etag": "\"554ebd810eb3ab79d1882b1176189bbd\"",
+          "size": 1180640,
+          "uploadedAt": "2026-07-01T17:16:11.545Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -54,7 +84,22 @@
       "image": {
         "localPath": "images/kitchen-narrow-03.png",
         "fileName": "kitchen-narrow-03.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-narrow-03.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-narrow-03.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "3vwz00hxqhrmy0cz3terg45zhg",
+          "prompt": "a small Japanese apartment kitchen with cabinets and sink, close-up detail of practical storage products on shelves, theme: 狭いキッチン 収納 一人暮らし, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:57:34.514Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/kitchen-narrow-03.png",
+          "etag": "\"588abb7c4833ab3456e222f5c6766784\"",
+          "size": 1375419,
+          "uploadedAt": "2026-07-01T17:16:11.718Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -73,7 +118,22 @@
       "image": {
         "localPath": "images/kitchen-sink-under-01.png",
         "fileName": "kitchen-sink-under-01.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-sink-under-01.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-sink-under-01.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "hptstjc0shrmt0cz3tet9vqt6m",
+          "prompt": "a small Japanese apartment kitchen with cabinets and sink, split-screen before-and-after organization, left cluttered and right tidy, theme: シンク下 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:57:52.195Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/kitchen-sink-under-01.png",
+          "etag": "\"073b890b5a2601b5e2beb82d28f88fd1\"",
+          "size": 1042869,
+          "uploadedAt": "2026-07-01T17:16:11.867Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -92,7 +152,22 @@
       "image": {
         "localPath": "images/kitchen-sink-under-02.png",
         "fileName": "kitchen-sink-under-02.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-sink-under-02.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-sink-under-02.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "yh3y2h668drmr0cz3tet67gcf0",
+          "prompt": "a small Japanese apartment kitchen with cabinets and sink, clean organized after photo, minimalist storage boxes and labels, theme: シンク下 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:58:09.858Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/kitchen-sink-under-02.png",
+          "etag": "\"198c3893758322f1fa65f6f17a9103b4\"",
+          "size": 902927,
+          "uploadedAt": "2026-07-01T17:16:12.364Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -111,7 +186,22 @@
       "image": {
         "localPath": "images/kitchen-sink-under-03.png",
         "fileName": "kitchen-sink-under-03.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-sink-under-03.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-sink-under-03.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "qsm6earatnrmy0cz3tf8ttx2v0",
+          "prompt": "a small Japanese apartment kitchen with cabinets and sink, close-up detail of practical storage products on shelves, theme: シンク下 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:58:27.146Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/kitchen-sink-under-03.png",
+          "etag": "\"f7fcb4a6855d807da6c79edb78320a94\"",
+          "size": 1247083,
+          "uploadedAt": "2026-07-01T17:16:12.576Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -130,7 +220,22 @@
       "image": {
         "localPath": "images/kitchen-spice-magnet-01.png",
         "fileName": "kitchen-spice-magnet-01.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-spice-magnet-01.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-spice-magnet-01.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "cxcx2caeasrmy0cz3tfbf6bxt0",
+          "prompt": "a small Japanese apartment kitchen with cabinets and sink, split-screen before-and-after organization, left cluttered and right tidy, theme: 調味料 マグネット収納 賃貸, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:58:44.291Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/kitchen-spice-magnet-01.png",
+          "etag": "\"9178c6d5a56b35f4c193df1b16c308e2\"",
+          "size": 1000510,
+          "uploadedAt": "2026-07-01T17:16:12.839Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -149,7 +254,22 @@
       "image": {
         "localPath": "images/kitchen-spice-magnet-02.png",
         "fileName": "kitchen-spice-magnet-02.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-spice-magnet-02.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-spice-magnet-02.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "k6rvs34hcdrmw0cz3tfadat6bg",
+          "prompt": "a small Japanese apartment kitchen with cabinets and sink, clean organized after photo, minimalist storage boxes and labels, theme: 調味料 マグネット収納 賃貸, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:59:01.529Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/kitchen-spice-magnet-02.png",
+          "etag": "\"7abc2238998e0c2cf00d6281bb27fac7\"",
+          "size": 1127408,
+          "uploadedAt": "2026-07-01T17:16:13.152Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -168,7 +288,22 @@
       "image": {
         "localPath": "images/kitchen-spice-magnet-03.png",
         "fileName": "kitchen-spice-magnet-03.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-spice-magnet-03.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/kitchen-spice-magnet-03.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "hx4v5rymqhrmy0cz3tf990bp7m",
+          "prompt": "a small Japanese apartment kitchen with cabinets and sink, close-up detail of practical storage products on shelves, theme: 調味料 マグネット収納 賃貸, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:59:18.700Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/kitchen-spice-magnet-03.png",
+          "etag": "\"0e37c5d5c859646b3134b5b69b1c201a\"",
+          "size": 1305512,
+          "uploadedAt": "2026-07-01T17:16:13.425Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -187,7 +322,22 @@
       "image": {
         "localPath": "images/oneroom-8tatami-01.png",
         "fileName": "oneroom-8tatami-01.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/oneroom-8tatami-01.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/oneroom-8tatami-01.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "dx8w1ygqtnrmw0cz3tfvapt56w",
+          "prompt": "a compact one-room studio apartment in Japan, split-screen before-and-after organization, left cluttered and right tidy, theme: ワンルーム 8畳 収納 レイアウト, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:59:38.058Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/oneroom-8tatami-01.png",
+          "etag": "\"de63c2e864bfc6f6e39ba504cc802808\"",
+          "size": 1799412,
+          "uploadedAt": "2026-07-01T17:16:13.630Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -206,7 +356,22 @@
       "image": {
         "localPath": "images/oneroom-8tatami-02.png",
         "fileName": "oneroom-8tatami-02.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/oneroom-8tatami-02.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/oneroom-8tatami-02.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "72nj4g33d5rmt0cz3tfs2q9m5r",
+          "prompt": "a compact one-room studio apartment in Japan, clean organized after photo, minimalist storage boxes and labels, theme: ワンルーム 8畳 収納 レイアウト, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T16:59:55.414Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/oneroom-8tatami-02.png",
+          "etag": "\"153c800a7183f9a1327f6a1a37c55a9c\"",
+          "size": 1349407,
+          "uploadedAt": "2026-07-01T17:16:13.837Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -225,7 +390,22 @@
       "image": {
         "localPath": "images/oneroom-8tatami-03.png",
         "fileName": "oneroom-8tatami-03.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/oneroom-8tatami-03.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/oneroom-8tatami-03.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "nem9van755rmr0cz3tfsz5qb9m",
+          "prompt": "a compact one-room studio apartment in Japan, close-up detail of practical storage products on shelves, theme: ワンルーム 8畳 収納 レイアウト, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:00:12.484Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/oneroom-8tatami-03.png",
+          "etag": "\"7e44fdb55c74160c599ecd11cba5a243\"",
+          "size": 1480838,
+          "uploadedAt": "2026-07-01T17:16:13.986Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -244,7 +424,22 @@
       "image": {
         "localPath": "images/closet-oshiire-01.png",
         "fileName": "closet-oshiire-01.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-oshiire-01.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/closet-oshiire-01.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "hzmwx7q9x9rmr0cz3tfvsetjcr",
+          "prompt": "a small closet and wardrobe storage area, split-screen before-and-after organization, left cluttered and right tidy, theme: 押入れ 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:00:29.784Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/closet-oshiire-01.png",
+          "etag": "\"8117c58284795b9cacfa218a8df3e27d\"",
+          "size": 1481573,
+          "uploadedAt": "2026-07-01T17:16:14.166Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -263,7 +458,22 @@
       "image": {
         "localPath": "images/closet-oshiire-02.png",
         "fileName": "closet-oshiire-02.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-oshiire-02.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/closet-oshiire-02.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "f3gdxxhde9rmr0cz3tgbyzt37w",
+          "prompt": "a small closet and wardrobe storage area, clean organized after photo, minimalist storage boxes and labels, theme: 押入れ 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:00:47.081Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/closet-oshiire-02.png",
+          "etag": "\"d9af3bf9cd23d9e66c0e0bced3c0abd0\"",
+          "size": 1257214,
+          "uploadedAt": "2026-07-01T17:16:14.316Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -282,7 +492,22 @@
       "image": {
         "localPath": "images/closet-oshiire-03.png",
         "fileName": "closet-oshiire-03.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-oshiire-03.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/closet-oshiire-03.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "nfmt96vhbsrmw0cz3tg89g5f60",
+          "prompt": "a small closet and wardrobe storage area, close-up detail of practical storage products on shelves, theme: 押入れ 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:01:04.463Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/closet-oshiire-03.png",
+          "etag": "\"b8760592a71d7f05dce25603663a9bbb\"",
+          "size": 1360346,
+          "uploadedAt": "2026-07-01T17:16:14.498Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -301,7 +526,22 @@
       "image": {
         "localPath": "images/closet-clothes-01.png",
         "fileName": "closet-clothes-01.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-clothes-01.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/closet-clothes-01.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "pshhnydnnsrmt0cz3tgas97m9g",
+          "prompt": "a small closet and wardrobe storage area, split-screen before-and-after organization, left cluttered and right tidy, theme: クローゼット 洋服 コンパクト, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:01:24.089Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/closet-clothes-01.png",
+          "etag": "\"13280281443af73dba30421c00e5fa95\"",
+          "size": 1592982,
+          "uploadedAt": "2026-07-01T17:16:14.679Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -320,7 +560,22 @@
       "image": {
         "localPath": "images/closet-clothes-02.png",
         "fileName": "closet-clothes-02.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-clothes-02.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/closet-clothes-02.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "zcs2ns02v9rmr0cz3tgt8nc3br",
+          "prompt": "a small closet and wardrobe storage area, clean organized after photo, minimalist storage boxes and labels, theme: クローゼット 洋服 コンパクト, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:01:43.983Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/closet-clothes-02.png",
+          "etag": "\"3d3342eec5b79508da7db233f7e2cf65\"",
+          "size": 1308434,
+          "uploadedAt": "2026-07-01T17:16:14.903Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -339,7 +594,22 @@
       "image": {
         "localPath": "images/closet-clothes-03.png",
         "fileName": "closet-clothes-03.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/closet-clothes-03.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/closet-clothes-03.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "1penz4jfadrmt0cz3tgtst2y3m",
+          "prompt": "a small closet and wardrobe storage area, close-up detail of practical storage products on shelves, theme: クローゼット 洋服 コンパクト, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:02:01.324Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/closet-clothes-03.png",
+          "etag": "\"9003dbae1af4eab2361eabc5809cdaa1\"",
+          "size": 1423652,
+          "uploadedAt": "2026-07-01T17:16:15.092Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -358,7 +628,22 @@
       "image": {
         "localPath": "images/entry-shoes-01.png",
         "fileName": "entry-shoes-01.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/entry-shoes-01.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/entry-shoes-01.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "zd063c4k0xrmt0cz3tgt10smmr",
+          "prompt": "a narrow apartment entryway with shoe storage, split-screen before-and-after organization, left cluttered and right tidy, theme: 玄関 靴 収納 狭い, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:02:18.735Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/entry-shoes-01.png",
+          "etag": "\"2e3ca4b636a0844956c6aa588c359deb\"",
+          "size": 1436657,
+          "uploadedAt": "2026-07-01T17:16:15.285Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -377,7 +662,22 @@
       "image": {
         "localPath": "images/entry-shoes-02.png",
         "fileName": "entry-shoes-02.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/entry-shoes-02.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/entry-shoes-02.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "0c2xgfpq8srmt0cz3tgvrpynd0",
+          "prompt": "a narrow apartment entryway with shoe storage, clean organized after photo, minimalist storage boxes and labels, theme: 玄関 靴 収納 狭い, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:02:38.366Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/entry-shoes-02.png",
+          "etag": "\"e8818fbb7ce7e96451ce0fa38164fb55\"",
+          "size": 1252583,
+          "uploadedAt": "2026-07-01T17:16:15.419Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -396,7 +696,22 @@
       "image": {
         "localPath": "images/entry-shoes-03.png",
         "fileName": "entry-shoes-03.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/entry-shoes-03.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/entry-shoes-03.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "1cb0t2h3phrmw0cz3thb918ekw",
+          "prompt": "a narrow apartment entryway with shoe storage, close-up detail of practical storage products on shelves, theme: 玄関 靴 収納 狭い, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:02:57.850Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/entry-shoes-03.png",
+          "etag": "\"6080b2a4bf4395a09f66f4548d1285b1\"",
+          "size": 1095745,
+          "uploadedAt": "2026-07-01T17:16:15.565Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -415,7 +730,22 @@
       "image": {
         "localPath": "images/bath-vanity-under-01.png",
         "fileName": "bath-vanity-under-01.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/bath-vanity-under-01.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/bath-vanity-under-01.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "5br41nkh2nrmt0cz3th9yz13xr",
+          "prompt": "a small bathroom vanity with under-sink storage, split-screen before-and-after organization, left cluttered and right tidy, theme: 洗面台 下 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:03:16.470Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/bath-vanity-under-01.png",
+          "etag": "\"68648a7d69df7c19a01fcbc0906ce9c4\"",
+          "size": 1313204,
+          "uploadedAt": "2026-07-01T17:16:15.754Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -434,7 +764,22 @@
       "image": {
         "localPath": "images/bath-vanity-under-02.png",
         "fileName": "bath-vanity-under-02.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/bath-vanity-under-02.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/bath-vanity-under-02.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "h3qefrnt2nrmw0cz3thb2sjcnc",
+          "prompt": "a small bathroom vanity with under-sink storage, clean organized after photo, minimalist storage boxes and labels, theme: 洗面台 下 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:03:34.137Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/bath-vanity-under-02.png",
+          "etag": "\"71c7dc3da0bcf60bf7b58f1f35589b1f\"",
+          "size": 1230132,
+          "uploadedAt": "2026-07-01T17:16:15.909Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -453,7 +798,22 @@
       "image": {
         "localPath": "images/bath-vanity-under-03.png",
         "fileName": "bath-vanity-under-03.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/bath-vanity-under-03.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/bath-vanity-under-03.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "79fedw7xjxrmy0cz3th88mjns8",
+          "prompt": "a small bathroom vanity with under-sink storage, close-up detail of practical storage products on shelves, theme: 洗面台 下 収納 100均, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:03:51.202Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/bath-vanity-under-03.png",
+          "etag": "\"44a2b33ddfcc7898ceec8aed793eb1bb\"",
+          "size": 1301697,
+          "uploadedAt": "2026-07-01T17:16:16.095Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -472,7 +832,22 @@
       "image": {
         "localPath": "images/rental-wall-01.png",
         "fileName": "rental-wall-01.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/rental-wall-01.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/rental-wall-01.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "tkapnqj075rmy0cz3thsnrxqm8",
+          "prompt": "a rental-friendly apartment interior with no wall damage, split-screen before-and-after organization, left cluttered and right tidy, theme: 原状回復OK 賃貸 壁面収納, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:04:10.970Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/rental-wall-01.png",
+          "etag": "\"27bd01bf6897a7dd4f68bdddc44c8a20\"",
+          "size": 1681976,
+          "uploadedAt": "2026-07-01T17:16:16.306Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -491,7 +866,22 @@
       "image": {
         "localPath": "images/rental-wall-02.png",
         "fileName": "rental-wall-02.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/rental-wall-02.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/rental-wall-02.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "c0msw9mddsrmy0cz3thttfq2ew",
+          "prompt": "a rental-friendly apartment interior with no wall damage, clean organized after photo, minimalist storage boxes and labels, theme: 原状回復OK 賃貸 壁面収納, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:04:28.227Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/rental-wall-02.png",
+          "etag": "\"1fce2807bdcf3429bb82d4598dfe0723\"",
+          "size": 1335839,
+          "uploadedAt": "2026-07-01T17:16:16.487Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -510,7 +900,22 @@
       "image": {
         "localPath": "images/rental-wall-03.png",
         "fileName": "rental-wall-03.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/rental-wall-03.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/rental-wall-03.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "12pre5egvnrmw0cz3thtf122m8",
+          "prompt": "a rental-friendly apartment interior with no wall damage, close-up detail of practical storage products on shelves, theme: 原状回復OK 賃貸 壁面収納, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:04:45.317Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/rental-wall-03.png",
+          "etag": "\"8ba2903dc09351c6e368129ef8a5d19d\"",
+          "size": 1317849,
+          "uploadedAt": "2026-07-01T17:16:16.656Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -529,7 +934,22 @@
       "image": {
         "localPath": "images/living-cable-01.png",
         "fileName": "living-cable-01.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/living-cable-01.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/living-cable-01.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "wjxawm8kjhrmy0cz3tj9yssg8r",
+          "prompt": "a small living room with TV and cable management, split-screen before-and-after organization, left cluttered and right tidy, theme: テレビ 配線 隠す 収納, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:05:02.625Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/living-cable-01.png",
+          "etag": "\"d56d05460f7e1a190a665e271d91cdc3\"",
+          "size": 1584265,
+          "uploadedAt": "2026-07-01T17:16:16.926Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -548,7 +968,22 @@
       "image": {
         "localPath": "images/living-cable-02.png",
         "fileName": "living-cable-02.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/living-cable-02.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/living-cable-02.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "pyjwjt2r0nrmt0cz3tj87zjg6m",
+          "prompt": "a small living room with TV and cable management, clean organized after photo, minimalist storage boxes and labels, theme: テレビ 配線 隠す 収納, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:05:20.023Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/living-cable-02.png",
+          "etag": "\"99174d2abbd534bf0a90ac1c9f8e653d\"",
+          "size": 1126766,
+          "uploadedAt": "2026-07-01T17:16:17.086Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",
@@ -567,7 +1002,22 @@
       "image": {
         "localPath": "images/living-cable-03.png",
         "fileName": "living-cable-03.png",
-        "publicUrl": "https://your-cdn.example.com/pinterest-storage/living-cable-03.png"
+        "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/living-cable-03.png",
+        "flux": {
+          "model": "black-forest-labs/flux-1.1-pro",
+          "predictionId": "b6ynhfmv59rmy0cz3tj81jtxnm",
+          "prompt": "a small living room with TV and cable management, close-up detail of practical storage products on shelves, theme: テレビ 配線 隠す 収納, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+          "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+          "generatedAt": "2026-07-01T17:05:37.310Z"
+        },
+        "cdn": {
+          "provider": "r2",
+          "bucket": "pinterest-storage",
+          "key": "pinterest-storage/living-cable-03.png",
+          "etag": "\"9efa3ad2ee40727b6b4d4deb8024b64b\"",
+          "size": 1500300,
+          "uploadedAt": "2026-07-01T17:16:17.232Z"
+        }
       },
       "publishAt": "",
       "postedPinId": "",

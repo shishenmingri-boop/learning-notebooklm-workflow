@@ -11,7 +11,22 @@
   "image": {
     "localPath": "images/rental-wall-03.png",
     "fileName": "rental-wall-03.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/rental-wall-03.png"
+    "publicUrl": "https://pub-6ec69e88cd7846d88139f4a52bf0fc2c.r2.dev/pinterest-storage/rental-wall-03.png",
+    "flux": {
+      "model": "black-forest-labs/flux-1.1-pro",
+      "predictionId": "12pre5egvnrmw0cz3thtf122m8",
+      "prompt": "a rental-friendly apartment interior with no wall damage, close-up detail of practical storage products on shelves, theme: 原状回復OK 賃貸 壁面収納, realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic",
+      "negativePrompt": "text, letters, watermark, logo, blurry, distorted, extra fingers, people faces, anime, cartoon",
+      "generatedAt": "2026-07-01T17:04:45.317Z"
+    },
+    "cdn": {
+      "provider": "r2",
+      "bucket": "pinterest-storage",
+      "key": "pinterest-storage/rental-wall-03.png",
+      "etag": "\"8ba2903dc09351c6e368129ef8a5d19d\"",
+      "size": 1317849,
+      "uploadedAt": "2026-07-01T17:16:16.656Z"
+    }
   },
   "publishAt": "",
   "postedPinId": "",

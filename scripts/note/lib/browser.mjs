@@ -81,6 +81,10 @@ function normalizeBrowserChannels(value) {
  * @param {{ email: string, password: string }} credentials
  */
 export async function loginToNote(page, credentials) {
+  await page.goto("https://note.com/notes/new", 
+    { waitUntil: "domcontentloaded", timeout: 60000 });
+await page.waitForTimeout(2000);
+if (await findTitleInput(page)) return;
   const { email, password } = credentials;
   if (!email || !password) {
     throw new Error("NOTE_EMAIL と NOTE_PASSWORD が必要です。.env を設定してください。");
