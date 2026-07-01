@@ -193,11 +193,48 @@ node scripts/pinterest_generate_images.mjs --pin-id kitchen-narrow-01
 
 モデルは `content-queue/config.json` の `flux.model` で変更できます。コスト重視なら `black-forest-labs/flux-schnell` に差し替え可能です。
 
-### 4. 画像を CDN へ配置
+429（レート制限）や 402（クレジット不足）への対処:
 
-`content-queue/images/` の PNG を CDN にアップロードし、`image.publicUrl` が公開 URL になるようにします。
+- **429**: `flux-client.mjs` が Retry-After または指数バックオフ（2s→32s、最大5回）で自動リトライします。`--sleep`（既定12秒）で連続生成間隔も調整できます。
+- **402**: リトライせず即座にエラー終了します。[Replicate billing](https://replicate.com/account/billing) でクレジットを購入してください。
 
-### 5. OAuth と投稿
+```bash
+node scripts/pinterest_generate_images.mjs --sleep 15 --retry 2
+```
+
+### 4. 実行前検証（doctor）
+
+```bash
+npm run pinterest:doctor
+```
+
+Replicate / Pinterest / CDN 認証、公開 URL プレースホルダ、note URL、manifest 先頭 pin の URL 到達性をチェックします。結果は `content-queue/doctor-result.md` に出力されます。
+
+### 5. 画像を CDN へアップロード
+
+`.env` に CDN 認証情報を設定します。**bucket 名の単一ソースは `.env` の `CDN_BUCKET`** です（`config.cdn.bucket` は参考値）。
+
+```bash
+npm run pinterest:upload:dry-run
+npm run pinterest:upload
+```
+
+`content-queue/images/` の PNG を R2 / S3 互換ストレージへアップロードし、`pin.image.publicUrl` と `pin.image.cdn` を更新します。結果は `content-queue/cdn-upload-result.md` に記録されます。
+
+### 6. 再開可能パイプライン
+
+途中から再開できるオーケストレータです。各 pin の段階（imaged / uploaded / posted）を自動判定し、未完了の段階だけ実行します。
+
+```bash
+npm run pinterest:pipeline
+npm run pinterest:pipeline -- --stage images
+npm run pinterest:pipeline -- --stage upload
+npm run pinterest:pipeline -- --stage post --dry-run true
+```
+
+結果は `content-queue/pipeline-result.md` に記録されます。
+
+### 7. OAuth と投稿
 
 ```bash
 npm run pinterest:auth
@@ -214,6 +251,18 @@ node scripts/pinterest_api_post.mjs --action post-queue --dry-run false --sandbo
 ```
 
 結果は `content-queue/pipeline-result.md` と `content-queue/post-result.md` に記録されます。
+
+利用可能な npm スクリプト（Pinterest 関連）:
+
+| コマンド | 説明 |
+|---|---|
+| `pinterest:generate` | keywords → note + pin JSON 生成 |
+| `pinterest:images` / `pinterest:images:dry-run` | Flux 画像生成 |
+| `pinterest:doctor` | 実行前検証 |
+| `pinterest:upload` / `pinterest:upload:dry-run` | CDN アップロード |
+| `pinterest:pipeline` | 再開可能オーケストレータ |
+| `pinterest:auth` / `pinterest:boards` | OAuth / ボード ID |
+| `pinterest:post:dry-run` / `pinterest:post` | 投稿 |
 
 ## 手動フォールバック
 

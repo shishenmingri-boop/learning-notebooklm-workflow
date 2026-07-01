@@ -75,22 +75,30 @@ keywords.csv
 |---|---|
 | `scripts/pinterest_content_pipeline.mjs` | keywords → note + pin JSON + manifest |
 | `scripts/pinterest_generate_images.mjs` | Flux（Replicate）画像生成 |
+| `scripts/pinterest_upload_images.mjs` | CDN（R2/S3）へ PNG アップロード |
+| `scripts/pinterest_doctor.mjs` | 実行前検証（API キー / URL / 到達性） |
+| `scripts/pinterest_pipeline.mjs` | 再開可能オーケストレータ（images→upload→post） |
 | `scripts/pinterest_api_post.mjs` | OAuth + ボード取得 + 投稿 |
 | `scripts/pinterest/lib/common.mjs` | 共通ユーティリティ |
+| `scripts/pinterest/lib/cdn-client.mjs` | CDN（S3 互換）アップロード |
 | `scripts/pinterest/lib/pinterest-client.mjs` | Pinterest API / OAuth |
-| `scripts/pinterest/lib/flux-client.mjs` | Replicate Flux API |
+| `scripts/pinterest/lib/flux-client.mjs` | Replicate Flux API（429/402 耐性） |
 | `scripts/pinterest/lib/prompt-builder.mjs` | 収納向けプロンプト |
 
 ### npm スクリプト
 
 ```bash
 npm run pinterest:generate         # コンテンツ生成
-npm run pinterest:images           # Flux 画像生成（全 draft）
-npm run pinterest:images:dry-run   # プロンプト確認のみ
-npm run pinterest:auth             # Pinterest OAuth
-npm run pinterest:boards           # ボード ID 取得 → config 更新
-npm run pinterest:post:dry-run       # 投稿前確認
-npm run pinterest:post             # 本番投稿
+npm run pinterest:images             # Flux 画像生成（全 draft）
+npm run pinterest:images:dry-run     # プロンプト確認のみ
+npm run pinterest:doctor             # 実行前検証
+npm run pinterest:upload:dry-run     # CDN アップロード確認
+npm run pinterest:upload             # CDN 本番アップロード
+npm run pinterest:pipeline           # 再開可能オーケストレータ（全段階）
+npm run pinterest:auth               # Pinterest OAuth
+npm run pinterest:boards             # ボード ID 取得 → config 更新
+npm run pinterest:post:dry-run         # 投稿前確認
+npm run pinterest:post               # 本番投稿
 ```
 
 ### 設定ファイル
@@ -163,7 +171,14 @@ PINTEREST_APP_ID=           # Pinterest Developer Portal
 PINTEREST_APP_SECRET=
 PINTEREST_REDIRECT_URI=http://localhost:8765/callback
 REPLICATE_API_TOKEN=        # https://replicate.com/account/api-tokens
+CDN_PROVIDER=r2
+CDN_ACCESS_KEY_ID=          # Cloudflare R2 等
+CDN_SECRET_ACCESS_KEY=
+CDN_ENDPOINT=https://YOUR_ACCOUNT_ID.r2.cloudflarestorage.com
+CDN_BUCKET=                 # ← bucket 名の単一ソース
 ```
+
+**bucket 名は `.env` の `CDN_BUCKET` を正とする。** `config.cdn.bucket` との不一致は `pinterest:doctor` が WARN します。
 
 `content-queue/config.json` を編集:
 
@@ -193,25 +208,33 @@ REPLICATE_API_TOKEN=        # https://replicate.com/account/api-tokens
 # ① コンテンツ再生成（必要なら）
 npm run pinterest:generate
 
-# ② プロンプト確認
+# ② 実行前検証
+npm run pinterest:doctor
+
+# ③ プロンプト確認
 npm run pinterest:images:dry-run
 
-# ③ 画像生成（1枚テスト）
+# ④ 画像生成（1枚テスト）
 node scripts/pinterest_generate_images.mjs --pin-id kitchen-narrow-01
 
-# ④ 全画像生成
+# ⑤ 全画像生成（--sleep で429回避、--retry で再試行）
 npm run pinterest:images
 
-# ⑤ CDN に images/*.png をアップロード
-#    → image.publicUrl が公開 URL になることを確認
+# ⑥ CDN アップロード
+npm run pinterest:upload:dry-run
+npm run pinterest:upload
 
-# ⑥ Pinterest 認証
+# または再開可能パイプライン（途中から再開可）
+npm run pinterest:pipeline
+npm run pinterest:pipeline -- --stage post --dry-run true
+
+# ⑦ Pinterest 認証
 npm run pinterest:auth
 
-# ⑦ ボード ID 取得
+# ⑧ ボード ID 取得
 npm run pinterest:boards
 
-# ⑧ 投稿確認 → 本番
+# ⑨ 投稿確認 → 本番
 npm run pinterest:post:dry-run
 npm run pinterest:post
 ```
@@ -229,6 +252,10 @@ npm run pinterest:post
 - [x] 自動化 Phase 1（コンテンツ生成パイプライン）
 - [x] 自動化 Phase 2（Pinterest API 投稿）
 - [x] Flux 画像生成（Replicate）統合
+- [x] CDN 自動アップロード（R2 / S3 スクリプト）
+- [x] 実行前検証（pinterest:doctor）
+- [x] 再開可能パイプライン（pinterest:pipeline）
+- [x] Flux 429/402 耐性（リトライ / クレジット不足メッセージ）
 - [x] keywords 10 件 + note 10 本 + pin 30 本 生成
 
 ### 未完了（次にやること）
@@ -236,7 +263,7 @@ npm run pinterest:post
 - [ ] `.env` に API キー設定
 - [ ] `config.json` の noteBaseUrl / imagePublicBaseUrl を本番 URL に更新
 - [ ] Flux で PNG 30 枚生成（`npm run pinterest:images`）
-- [ ] PNG を CDN（R2 / S3 等）へアップロード
+- [ ] CDN アップロード（`npm run pinterest:upload`）
 - [ ] note 記事を note.com に公開（手動 or 将来 Playwright 化）
 - [ ] 楽天 ROOM / アフィリリンクを記事に設定
 - [ ] Pinterest OAuth 完了
@@ -245,7 +272,6 @@ npm run pinterest:post
 
 ### 将来拡張（検討のみ）
 
-- [ ] CDN 自動アップロード（R2 / S3 スクリプト）
 - [ ] note Playwright 自動公開
 - [ ] 予約投稿スケジュール自動計算（`publish_at`）
 - [ ] Canva テキスト載せ自動化
@@ -263,9 +289,13 @@ learning-notebooklm-workflow/
 ├── scripts/
 │   ├── pinterest_content_pipeline.mjs
 │   ├── pinterest_generate_images.mjs
+│   ├── pinterest_upload_images.mjs
+│   ├── pinterest_doctor.mjs
+│   ├── pinterest_pipeline.mjs
 │   ├── pinterest_api_post.mjs
 │   └── pinterest/lib/
 │       ├── common.mjs
+│       ├── cdn-client.mjs
 │       ├── pinterest-client.mjs
 │       ├── flux-client.mjs
 │       └── prompt-builder.mjs
@@ -277,8 +307,10 @@ learning-notebooklm-workflow/
     ├── manifest.json
     ├── notes/                         # 10 本
     ├── pins/                          # 30 本
-    ├── images/                        # PNG 置き場（未生成）
+    ├── images/                        # PNG 置き場
     ├── pipeline-result.md
+    ├── doctor-result.md
+    ├── cdn-upload-result.md
     ├── post-result.md
     └── image-generation-result.md
 ```
@@ -300,7 +332,15 @@ learning-notebooklm-workflow/
   "image": {
     "localPath": "images/kitchen-narrow-01.png",
     "fileName": "kitchen-narrow-01.png",
-    "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-narrow-01.png"
+    "publicUrl": "https://your-cdn.example.com/pinterest-storage/kitchen-narrow-01.png",
+    "cdn": {
+      "provider": "r2",
+      "bucket": "my-bucket",
+      "key": "pinterest-storage/kitchen-narrow-01.png",
+      "etag": "\"abc123\"",
+      "size": 123456,
+      "uploadedAt": "2026-07-01T00:00:00.000Z"
+    }
   }
 }
 ```
@@ -336,21 +376,12 @@ learning-notebooklm-workflow/
 | ファイル | 内容 |
 |---|---|
 | `README.md` | セットアップ全体 |
-| `content-queue/pipeline-result.md` | 直近の生成結果 |
+| `content-queue/pipeline-result.md` | 直近のパイプライン結果 |
+| `content-queue/doctor-result.md` | 直近の doctor 結果 |
+| `content-queue/cdn-upload-result.md` | CDN アップロード結果 |
 | `content-queue/post-result.md` | 直近の投稿 dry-run 結果 |
 | `content-queue/image-generation-result.md` | Flux dry-run プロンプト例 |
 
 ---
 
-## 13. チャット履歴の要点
-
-1. Pinterest 収益化の実効単価調査（全ルート）
-2. ジャンル別試算表
-3. 楽天 vs Amazon vs ブログ広告 比較
-4. 収納特化のキーワード→導線→月収設計
-5. 投稿まで自動化可否 → Phase 1+2 実装
-6. AI 画像 → **Flux（Replicate API）** を採用・実装
-
----
-
-*最終更新: 2026-06-23*
+*最終更新: 2026-07-01*
