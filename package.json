@@ -11,6 +11,8 @@
     "pinterest:boards": "node scripts/pinterest_api_post.mjs --action boards",
     "pinterest:post:dry-run": "node scripts/pinterest_api_post.mjs --action post-queue --dry-run true",
     "pinterest:post": "node scripts/pinterest_api_post.mjs --action post-queue --dry-run false",
+    "pinterest:upload:dry-run": "node scripts/pinterest_upload_images.mjs --dry-run true --limit 3",
+    "pinterest:upload": "node scripts/pinterest_upload_images.mjs --dry-run false",
     "note:publish:dry-run": "node scripts/note_web_publish.mjs --dry-run true",
     "note:publish:draft": "node scripts/note_web_publish.mjs --mode draft --dry-run false",
     "note:publish": "node scripts/note_web_publish.mjs --mode publish --dry-run false",
@@ -19,6 +21,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.840.0"
+  },
   "devDependencies": {
     "playwright": "^1.61.0"
   }

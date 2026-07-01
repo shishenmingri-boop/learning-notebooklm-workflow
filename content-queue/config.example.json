@@ -25,5 +25,13 @@
     "outputFormat": "png",
     "outputQuality": 90,
     "promptSuffix": "realistic lifestyle photography, vertical composition, no people, no faces, no text, no watermark, high detail, Pinterest aesthetic"
+  },
+  "cdn": {
+    "provider": "r2",
+    "bucket": "your-bucket-name",
+    "prefix": "pinterest-storage/",
+    "region": "auto",
+    "endpoint": "https://YOUR_ACCOUNT_ID.r2.cloudflarestorage.com",
+    "publicBaseUrl": ""
   }
 }
