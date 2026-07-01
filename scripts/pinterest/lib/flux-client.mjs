@@ -4,6 +4,8 @@ import { ensureDir } from "./common.mjs";
 
 const DEFAULT_MODEL = "black-forest-labs/flux-1.1-pro";
 const DEFAULT_ASPECT_RATIO = "2:3";
+const RETRY_BACKOFF_MS = [2000, 4000, 8000, 16000, 32000];
+const MAX_CREATE_RETRIES = 5;
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -63,15 +65,38 @@ export async function generateFluxImage({
 }
 
 async function createPrediction(model, input, token) {
-  const response = await fetch(`https://api.replicate.com/v1/models/${model}/predictions`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ input }),
-  });
-  return parseResponse(response);
+  let attempt = 0;
+
+  while (true) {
+    const response = await fetch(`https://api.replicate.com/v1/models/${model}/predictions`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ input }),
+    });
+
+    try {
+      return await parseResponse(response);
+    } catch (error) {
+      const status = error?.status;
+      if (status === 402) {
+        throw new Error("Replicate クレジット不足。https://replicate.com/account/billing で購入してください");
+      }
+      if (status === 429 && attempt < MAX_CREATE_RETRIES) {
+        const retryAfterHeader = response.headers.get("Retry-After");
+        const retryAfterSec = retryAfterHeader ? Number(retryAfterHeader) : 0;
+        const waitMs = retryAfterSec > 0
+          ? retryAfterSec * 1000
+          : RETRY_BACKOFF_MS[Math.min(attempt, RETRY_BACKOFF_MS.length - 1)];
+        await sleep(waitMs);
+        attempt += 1;
+        continue;
+      }
+      throw error;
+    }
+  }
 }
 
 async function waitForPrediction(prediction, fluxConfig) {
@@ -114,7 +139,9 @@ async function parseResponse(response) {
   }
   if (!response.ok) {
     const message = body.detail || body.error || body.title || text || response.statusText;
-    throw new Error(`Replicate API ${response.status}: ${message}`);
+    const error = new Error(`Replicate API ${response.status}: ${message}`);
+    error.status = response.status;
+    throw error;
   }
   return body;
 }
