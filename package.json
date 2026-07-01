@@ -13,6 +13,7 @@
     "pinterest:post": "node scripts/pinterest_api_post.mjs --action post-queue --dry-run false",
     "pinterest:upload:dry-run": "node scripts/pinterest_upload_images.mjs --dry-run true --limit 3",
     "pinterest:upload": "node scripts/pinterest_upload_images.mjs --dry-run false",
+    "pinterest:doctor": "node scripts/pinterest_doctor.mjs",
     "note:publish:dry-run": "node scripts/note_web_publish.mjs --dry-run true",
     "note:publish:draft": "node scripts/note_web_publish.mjs --mode draft --dry-run false",
     "note:publish": "node scripts/note_web_publish.mjs --mode publish --dry-run false",
